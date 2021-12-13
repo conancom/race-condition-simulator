@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <right>
+      <VBox prefHeight="675.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="393.0" prefWidth="265.0">
+               <children>
+                  <StackPane prefHeight="45.0" prefWidth="265.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a5d2fc" height="45.0" stroke="BLACK" strokeType="INSIDE" width="265.0" />
+                        <Text stroke="#ebae34" strokeType="OUTSIDE" strokeWidth="0.0" text="Process 3: Multiplication" wrappingWidth="157.14453125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </StackPane>
+                  <Text fx:id="p3StatusText" strokeType="OUTSIDE" strokeWidth="0.0" text="Status : Idle" wrappingWidth="194.13671875" />
+                  <HBox alignment="CENTER" prefHeight="156.0" prefWidth="265.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Value to Multiply :" wrappingWidth="99.53125" />
+                        <TextField fx:id="mulValue" prefHeight="25.0" prefWidth="82.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="135.0" prefWidth="265.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="lockMulButton" mnemonicParsing="false" onAction="#lockMulButton" text="Lock" />
+                        <Button fx:id="execMulButton" disable="true" mnemonicParsing="false" onAction="#execMulButton" text="Execute" />
+                        <Button fx:id="unlockMulButton" disable="true" mnemonicParsing="false" onAction="#unlockMulButton" text="Unlock" />
+                     </children>
+                  </HBox>
+                  <Text fx:id="p3ReadValueText" strokeType="OUTSIDE" strokeWidth="0.0" text="Read Value :" visible="false" wrappingWidth="136.13671875" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="407.0" prefWidth="265.0">
+               <children>
+                  <StackPane prefHeight="45.0" prefWidth="265.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a5d2fc" height="45.0" stroke="BLACK" strokeType="INSIDE" width="265.0" />
+                        <Text stroke="#ebae34" strokeType="OUTSIDE" strokeWidth="0.0" text="Process 4: Division" wrappingWidth="157.14453125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </StackPane>
+                  <Text fx:id="p4StatusText" strokeType="OUTSIDE" strokeWidth="0.0" text="Status : Idle" wrappingWidth="194.13671875" />
+                  <HBox alignment="CENTER" prefHeight="156.0" prefWidth="265.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Value to Divide by :" wrappingWidth="106.53125" />
+                        <TextField fx:id="divValue" prefHeight="25.0" prefWidth="82.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="135.0" prefWidth="265.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="lockDivButton" mnemonicParsing="false" onAction="#lockDivButton" text="Lock" />
+                        <Button fx:id="execDivButton" disable="true" mnemonicParsing="false" onAction="#execDivButton" text="Execute" />
+                        <Button fx:id="unlockDivButton" disable="true" mnemonicParsing="false" onAction="#unlockDivButton" text="Unlock" />
+                     </children>
+                  </HBox>
+                  <Text fx:id="p4ReadValueText" strokeType="OUTSIDE" strokeWidth="0.0" text="Read Value :" visible="false" wrappingWidth="136.13671875" />
+               </children>
+            </VBox>
+         </children></VBox>
+   </right>
+   <left>
+      <VBox alignment="TOP_CENTER" centerShape="false" prefHeight="786.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="392.0" prefWidth="265.0">
+               <children>
+                  <StackPane prefHeight="45.0" prefWidth="265.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a5d2fc" height="45.0" stroke="BLACK" strokeType="INSIDE" width="265.0" />
+                        <Text stroke="#ebae34" strokeType="OUTSIDE" strokeWidth="0.0" text="Process 1: Addition" wrappingWidth="157.14453125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </StackPane>
+                  <Text fx:id="p1StatusText" strokeType="OUTSIDE" strokeWidth="0.0" text="Status : Idle" wrappingWidth="194.13671875" />
+                  <HBox alignment="CENTER" prefHeight="156.0" prefWidth="265.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Value to Add :" wrappingWidth="78.53125" />
+                        <TextField fx:id="addValue" prefHeight="25.0" prefWidth="82.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="135.0" prefWidth="265.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="lockAddButton" mnemonicParsing="false" onAction="#lockAddButton" text="Lock" />
+                        <Button fx:id="execAddButton" disable="true" mnemonicParsing="false" onAction="#execAddButton" text="Execute" />
+                        <Button fx:id="unlockAddButton" disable="true" mnemonicParsing="false" onAction="#unlockAddButton" text="Unlock" />
+                     </children>
+                  </HBox>
+                  <Text fx:id="p1ReadValueText" strokeType="OUTSIDE" strokeWidth="0.0" text="Read Value : " visible="false" wrappingWidth="136.13671875" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="392.0" prefWidth="265.0">
+               <children>
+                  <StackPane prefHeight="45.0" prefWidth="265.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a5d2fc" height="45.0" stroke="BLACK" strokeType="INSIDE" width="265.0" />
+                        <Text stroke="#ebae34" strokeType="OUTSIDE" strokeWidth="0.0" text="Process 2: Subtraction" wrappingWidth="157.14453125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </StackPane>
+                  <Text fx:id="p2StatusText" strokeType="OUTSIDE" strokeWidth="0.0" text="Status : Idle" wrappingWidth="194.13671875" />
+                  <HBox alignment="CENTER" prefHeight="156.0" prefWidth="265.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Value to Subtract :" wrappingWidth="99.53125" />
+                        <TextField fx:id="subValue" prefHeight="25.0" prefWidth="82.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="135.0" prefWidth="265.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="lockSubButton" mnemonicParsing="false" onAction="#lockSubButton" text="Lock" />
+                        <Button fx:id="execSubButton" disable="true" mnemonicParsing="false" onAction="#execSubButton" text="Execute" />
+                        <Button fx:id="unlockSubButton" disable="true" mnemonicParsing="false" onAction="#unlockSubButton" text="Unlock" />
+                     </children>
+                  </HBox>
+                  <Text fx:id="p2ReadValueText" strokeType="OUTSIDE" strokeWidth="0.0" text="Read Value :" visible="false" wrappingWidth="136.13671875" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Details">
+            <items>
+              <MenuItem fx:id="petersonItem" mnemonicParsing="false" onAction="#petersonButton" text="Peterson's Algorithm Pseudo Code" />
+                  <MenuItem fx:id="spinlockItem" mnemonicParsing="false" onAction="#spinlockButton" text="Spin Lock Algorithm Pseudo Code" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Mode">
+              <items>
+                <MenuItem fx:id="unprotectedItem" mnemonicParsing="false" onAction="#unprotectedmodePressed" text="Unprotected" />
+                  <MenuItem fx:id="protectedItem" mnemonicParsing="false" onAction="#protectedmodePressed" text="Protected" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="755.0" prefWidth="470.0" spacing="5.0">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5c35f" height="200.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+                           <children>
+                              <Text layoutX="40.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memory Stack" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="119.73828125">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="topStackValueText" layoutX="33.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Stack Value = 0" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="134.13671875">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="167.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ALU%20png.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Text fx:id="aluOpertationText" layoutX="95.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="99.13671875" />
+                              <Text fx:id="aluTopStackValueText" layoutX="10.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="92.13671875" />
+                              <Text layoutX="73.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALU" textAlignment="CENTER" wrappingWidth="54.6328125">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="aluSolutionValueText" layoutX="73.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" visible="false" wrappingWidth="54.13671875" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <Text fx:id="queuewaitingText" strokeType="OUTSIDE" strokeWidth="0.0" text="Waiting Queue" wrappingWidth="200.0234375">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Line fx:id="queueuLine1" endX="127.5" startX="-100.0" />
+                        <Text fx:id="queueTextField" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="245.13671875">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Line fx:id="queueuLine2" endX="127.5" startX="-100.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="473.0" StackPane.alignment="CENTER">
+               <children>
+                  <QuadCurve fx:id="addcurve" controlX="18.0" controlY="177.0" endX="50.0" fill="#1f93ff00" layoutX="108.0" layoutY="116.0" startX="-99.0" startY="228.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+                  <QuadCurve fx:id="curve" controlX="-49.0" controlY="31.0" endX="86.0" endY="58.0" fill="#f0f0f000" layoutX="81.0" layoutY="277.0" startX="75.0" startY="-168.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="line1" endX="167.0" endY="335.0" startX="160.0" startY="323.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="line2" endX="160.0" endY="345.0" startX="167.0" startY="335.0" strokeWidth="3.0" visible="false" />
+                  <QuadCurve fx:id="curveun" controlX="56.0" controlY="-24.0" endX="-94.0" endY="109.0" fill="#aebfcf00" layoutX="378.0" layoutY="321.0" startX="-50.0" startY="-211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="line1un" endX="8.0" layoutX="328.0" layoutY="110.0" startX="-1.0" startY="2.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="line2un" endX="-5.0" endY="9.0" layoutX="328.0" layoutY="110.0" startX="-1.0" startY="2.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="queue1" endX="1.0" layoutX="181.0" layoutY="607.0" startX="-100.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="queue2" endX="100.5" endY="-12.0" layoutX="82.0" layoutY="620.0" startX="86.0" startY="-1.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="queue3" endX="100.5" endY="11.5" layoutX="82.0" layoutY="595.0" startX="88.0" startY="1.0" strokeWidth="3.0" visible="false" />
+                  <QuadCurve fx:id="dequeue1" controlX="31.0" controlY="-126.0" endX="7.0" endY="47.0" fill="#1f93ff00" layoutX="372.0" layoutY="563.0" startX="-57.0" startY="-211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="dequeue2" endX="-87.0" layoutX="414.0" layoutY="353.0" startX="-100.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="dequeue3" endX="-87.0" layoutX="401.0" layoutY="355.0" startX="-87.0" startY="12.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="addLine1" endX="-85.0" layoutX="108.0" layoutY="344.0" startX="-95.0" startY="-2.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="addLine2" endX="-85.0" layoutX="95.0" layoutY="341.0" startX="-78.0" startY="-10.0" strokeWidth="3.0" visible="false" />
+                  <QuadCurve fx:id="subcurve" controlX="-20.0" controlY="342.0" endX="-120.0" endY="400.878662109375" fill="#1f93ff00" layoutX="132.0" layoutY="346.0" startX="19.0" startY="-237.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="subLine1" endX="-85.0" layoutX="105.0" layoutY="747.0" startX="-95.0" startY="-2.0" strokeWidth="3.0" visible="false" />
+                  <Line fx:id="subLine2" endX="-85.0" layoutX="95.0" layoutY="744.0" startX="-78.0" startY="-10.0" strokeWidth="3.0" visible="false" />
+                  <QuadCurve fx:id="mulcurve" controlX="18.0" controlY="177.0" endX="50.0" fill="#1f93ff00" layoutX="415.0" layoutY="108.0" rotate="180.0" startX="-99.0" startY="228.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" visible="false">
+                     <rotationAxis>
+                        <Point3D y="1.0" />
+                     </rotationAxis>
+                  </QuadCurve>
+                  <Line fx:id="mulLine1" endX="-85.0" layoutX="550.0" layoutY="337.0" rotate="180.0" startX="-95.0" startY="-2.0" strokeWidth="3.0" visible="false">
+                     <rotationAxis>
+                        <Point3D y="1.0" />
+                     </rotationAxis>
+                  </Line>
+                  <Line fx:id="mulLine2" endX="-85.0" layoutX="542.0" layoutY="333.0" rotate="180.0" startX="-78.0" startY="-10.0" strokeWidth="3.0" visible="false">
+                     <rotationAxis>
+                        <Point3D y="1.0" />
+                     </rotationAxis>
+                  </Line>
+                  <QuadCurve fx:id="divcurve" controlX="-20.0" controlY="342.0" endX="-120.0" endY="400.878662109375" fill="#1f93ff00" layoutX="441.0" layoutY="346.0" rotate="180.0" startX="19.0" startY="-237.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" visible="false">
+                     <rotationAxis>
+                        <Point3D y="1.0" />
+                     </rotationAxis>
+                  </QuadCurve>
+                  <Line fx:id="divLine1" endX="-85.0" layoutX="544.0" layoutY="747.0" rotate="180.0" startX="-95.0" startY="-2.0" strokeWidth="3.0" visible="false">
+                     <rotationAxis>
+                        <Point3D y="1.0" />
+                     </rotationAxis>
+                  </Line>
+                  <Line fx:id="divLine2" endX="-85.0" layoutX="537.0" layoutY="743.0" rotate="180.0" startX="-78.0" startY="-13.0" strokeWidth="3.0" visible="false">
+                     <rotationAxis>
+                        <Point3D y="1.0" />
+                     </rotationAxis>
+                  </Line>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
