@@ -36,4 +36,4 @@ I only studied eclipse and used eclipse in this project. Meaning that the instal
 
 8) Press apply and you should be ready to go.
 
-9) Run the programm by Running the Main.java File. 👊
+9) Run the program by Running the Main.java File. 👊
