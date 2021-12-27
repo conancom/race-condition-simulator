@@ -37,3 +37,9 @@ I only studied eclipse and used eclipse in this project. Meaning that the instal
 8) Press apply and you should be ready to go.
 
 9) Run the program by Running the Main.java File. 👊
+
+## Running the code
+
+You can simply run/export the project after you completed the steps above.
+
+Additionally you can install Scene Builder from Gluon if you want to add elements, but don't wanna code pure XML.
