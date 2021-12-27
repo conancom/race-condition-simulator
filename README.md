@@ -43,3 +43,22 @@ I only studied eclipse and used eclipse in this project. Meaning that the instal
 You can simply run/export the project after you completed the steps above.
 
 Additionally you can install Scene Builder from Gluon if you want to add elements, but don't wanna code pure XML.
+
+
+![image](https://user-images.githubusercontent.com/79465272/147430319-f608edf1-d4c8-4352-86cb-f5e58f97d131.png)
+
+>- The Program will start as the Race Condition Prevention mode, where before each read of the stack, the other processes will be locked out from trying to read.
+
+
+![image](https://user-images.githubusercontent.com/79465272/147430422-f4745bd8-8005-4de7-b7c6-9c440271486b.png)
+
+>- This can of cause be changed on the mode section above.
+
+![image](https://user-images.githubusercontent.com/79465272/147430467-57887476-c683-4920-ac62-34964208f2de.png)
+
+>- The unprotected mode will let you play around without any Stack protection, meaning values from the stack can be read by any process at any time.
+
+## Concluding Notes
+
+Even though it should work as intended, small bugs and errors might occur. Additionally the code is not clean and optimized what so ever, as this project as it currently is was done in 1 week and before I have studied any optimization classes, therefore I made it so it `works` rather than `it looks good`.
+
